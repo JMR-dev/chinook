@@ -29,3 +29,7 @@ are valid ways of forming the query.
 ## Resources
 [How to concatenate columns in SQL - CONCAT_WS()](https://www.w3schools.com/sql/func_mysql_concat_ws.asp)
 
+## New Concepts/Syntax
+
+SQLite <br/>
+`strftime('%Y', InvoiceDate`
