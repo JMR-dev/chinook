@@ -1,4 +1,12 @@
 SELECT  
-     CONCAT_WS("-", "FirstName", "LastName") AS FULLNAME, CustomerId, InvoiceId, InvoiceDate, BillingCountry
+     Customer.FirstName, Customer.LastName, Invoice.InvoiceId, Invoice.InvoiceDate, Invoice.BillingCountry
 FROM
-    Customer, Invoice
+    Invoice
+INNER JOIN
+     Customer
+ON
+     Invoice.CustomerId = Customer.CustomerId
+WHERE
+     Invoice.BillingCountry = 'Brazil'
+ORDER BY
+     LastName ASC;
